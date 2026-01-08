@@ -1,13 +1,16 @@
 # Restaurant Inventory System in C++
 
-A console application for managing restaurant inventory with basic file persistence.
+A console application for managing restaurant inventory with object-oriented design.
 
-## Features (Coming Soon)
-- Product Management: Add, edit, delete main dishes, sides, and drinks
-- Inventory Operations: Restock items and track sales
-- Search & View: Find products by name, category, or price range
-- Low Stock Alerts: Warning when items fall below 5 units
-- CSV Save/Load: Basic file persistence between sessions
+## Current Implementation
 
-## License
-MIT
+- **Product Base Class** - Product class with core inventory logic
+- **Inventory Operations** - Restock, sell, and quantity tracking
+- **Stock Alerts** - Configurable warnings for low/out-of-stock items
+
+## To Be Implemented
+
+- **CSV Serialization** - File persistence for products
+- **Derived Classes** - MainDish, Side, Drink implementations  
+- **Inventory Manager** - Collection management system
+- **Console Interface** - User menu system
