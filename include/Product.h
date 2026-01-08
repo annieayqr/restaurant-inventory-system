@@ -3,50 +3,47 @@
 
 #include <string>
 #include <iostream>
-using namespace std;
 
 class Product {
 private:
-    int id;             // Unique identifier for each product
-    string name;
+    int ID;             // Unique identifier for each product
+    std::string name;
     double price;   
     int quantity;       // Number in stock
-    int threshold;      // Quantity threshold for alerts
+    int threshold;      // Quantity threshold for alerts, 0 turns off automated low-stock alerts
     static int nextID;  // Counter for auto-generating IDs
     
 public:
     // Constructor and destructor
-    Product(string name, double price, int quantity, int threshold = 5);
+    Product(std::string name, double price, int quantity, int threshold = 5);
     virtual ~Product() = default;
     
     // Getters
     int getID() const;
-    string getName() const;
+    std::string getName() const;
     double getPrice() const;
     int getQuantity() const;
     int getThreshold() const;
 
     // Setters
-    void setName(string newName);
+    void setName(std::string newName);
     void setPrice(double newPrice);
     void setQuantity(int newQuantity);
     void setThreshold(int newThreshold);
 
-    // Useful operators
-    Product& operator()(int amount);            // Quick restock / sell 
-    string operator[](int index) const;         // Print variable by index
-    Product& operator*(double discountFactor);  // Apply discount and modify object (e.g. product * 0.8 = 20% off)
-    friend ostream& operator<<(ostream& os, const Product& product);  // Quick print product info
+    void operator*(double discountFactor);  // Apply discount and modify object (e.g. product * 0.8 = 20% off)
 
     // Restock and sell
     void restock(int amount);
     void sell(int amount);
 
-    bool isLowStock() const;                    // Check if product is low on stock
+    void checkStock() const;                    // Alert if out of stock or low stock
 
-    virtual void display() const = 0;           // Print product info
-    virtual string getCategory() const = 0;     // Get product category (Main Dish / Side / Drink)
-    virtual string toCSV() const = 0;           // Convert to CSV format for saving
+    virtual std::string getCategory() const = 0;     // Get product category (Main Dish / Side / Drink)
+    virtual std::string toCSV() const = 0;           // Convert to CSV format for saving
 };
+
+// Print product details
+std::ostream& operator<<(std::ostream& os, const Product& product);  // Quick print product info
 
 #endif
