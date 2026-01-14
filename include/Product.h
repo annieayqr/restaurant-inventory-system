@@ -39,6 +39,7 @@ public:
 
     void checkStock() const;                    // Alert if out of stock or low stock
 
+    virtual std::string getFilename() const = 0;     // Get which CSV file to print to
     virtual std::string getCategory() const = 0;     // Get product category (Main Dish / Side / Drink)
     virtual std::string toCSV() const = 0;           // Convert to CSV format for saving
 };
