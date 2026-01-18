@@ -1,8 +1,8 @@
 #include "MainDish.h"
 #include <sstream>
-#include <stdexcept>
 #include <iomanip>
 
+// Constructor 
 MainDish::MainDish(std::string name, double price, int quantity, int threshold, MainType type, 
                    bool isSpicy, 
                    bool isVegetarian, 
@@ -37,7 +37,7 @@ void MainDish::setHasSeafood(bool seafood) {hasSeafood = seafood;}
 void MainDish::setHasDairy(bool dairy) {hasDairy = dairy;}
 void MainDish::setHasNuts(bool nuts) {hasNuts = nuts;}
     
-std::string MainDish::getFilename() const {return "data/main_dishes.csv";}
+std::string MainDish::getFilename() const {return "data/main_dish.csv";}
 std::string MainDish::getCategory() const {return "Main";}
 
 std::string MainDish::toCSV() const {
@@ -47,7 +47,6 @@ std::string MainDish::toCSV() const {
         << std::fixed << std::setprecision(2) << getPrice() << ","
         << getQuantity() << ","
         << getThreshold() << ","
-        << getCategory() << ","
         << typeToString(type) << ","
         << (isSpicy ? "1" : "0") << ","
         << (isVegetarian ? "1" : "0") << ","
@@ -65,7 +64,7 @@ std::string MainDish::typeToString(MainType type) {
         case MainType::PASTA: return "PASTA";
         case MainType::RICE: return "RICE";
         case MainType::OTHER: return "OTHER";
-        default: return "UNKNOWN";
+        default: return "OTHER";
     }
 }
 

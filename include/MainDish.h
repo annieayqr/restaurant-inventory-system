@@ -24,13 +24,13 @@ private:
 
 public:
     // Constructor with defaults
-    MainDish(std::string name, double price, int quantity, int threshold, MainType type, 
-                   bool isSpicy = false, 
-                   bool isVegetarian = false, 
-                   bool hasGluten = false,
-                   bool hasSeafood = false, 
-                   bool hasDairy = false, 
-                   bool hasNuts = false);
+    MainDish(std::string name, double price, int quantity, int threshold = 5, MainType type, 
+             bool isSpicy = false, 
+             bool isVegetarian = false, 
+             bool hasGluten = false,
+             bool hasSeafood = false, 
+             bool hasDairy = false, 
+             bool hasNuts = false);
     
     // Destructor
     virtual ~MainDish() = default;

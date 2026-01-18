@@ -20,9 +20,9 @@ A comprehensive C++ inventory management system for restaurants with allergy-awa
 - **CSV Serialization** - File persistence for products
 
 ### **Separated CSV Files by Product Type**
-- `data/main_dishes.csv` - Main dish inventory
+- `data/main_dish.csv` - Main dish inventory
 - `data/sides.csv` - Side dish inventory  
-- `data/drinks.csv` - Beverage inventory
+- `data/drink.csv` - Beverage inventory
 
 ## Advanced C++ Features
 - C++11 lambdas for flexible filtering
