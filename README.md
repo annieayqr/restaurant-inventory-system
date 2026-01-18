@@ -9,13 +9,13 @@ A comprehensive C++ inventory management system for restaurants with allergy-awa
 
 ## Current Implementation
 - **Product Base Class** - Product class with core inventory logic
-- **MainDish Derived Class** - MainDish implementations
+- **Derived Class** - MainDish, Side and Drink classes
 - **Inventory Management** - Restock, sell, and track quantities with configurable low-stock alerts
 - **Allergy & Dietary Tracking** - Tags for nuts, dairy, seafood, gluten, eggs, vegetarian, spicy, alcohol
 - **Auto-incrementing IDs** - Unique product identification system
 
 ## To Be Implemented
-- **Derived Classes** - Side, Drink implementations
+- **Console Interface** - Inventory and Console classes
 - **Smart Filtering System** - Lambda-based filters for price ranges, stock levels, and dietary constraints
 - **CSV Serialization** - File persistence for products
 
