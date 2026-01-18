@@ -7,9 +7,9 @@ enum class DrinkType {
     ALCOHOL,
     COFFEE,
     JUICE,
-    OTHER,
     SODA,
-    TEA
+    TEA,
+    OTHER
 };
 
 class Drink : public Product {
@@ -45,6 +45,7 @@ public:
     void setHasDairy(bool dairy);
     void setHasSugar(bool sugar);
 
+    // Required virtual overrides
     std::string getFilename() const override;
     std::string getCategory() const override;
     std::string toCSV() const override;

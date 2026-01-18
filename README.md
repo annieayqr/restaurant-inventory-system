@@ -21,7 +21,7 @@ A comprehensive C++ inventory management system for restaurants with allergy-awa
 
 ### **Separated CSV Files by Product Type**
 - `data/main_dish.csv` - Main dish inventory
-- `data/sides.csv` - Side dish inventory  
+- `data/side.csv` - Side dish inventory  
 - `data/drink.csv` - Beverage inventory
 
 ## Advanced C++ Features

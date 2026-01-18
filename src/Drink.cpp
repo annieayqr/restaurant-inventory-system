@@ -46,23 +46,14 @@ std::string Drink::toCSV() const {
     return oss.str();
 }
 
-/*enum class DrinkType {
-    ALCOHOL,
-    COFFEE,
-    JUICE,
-    OTHER,
-    SODA,
-    TEA
-};*/
-
 std::string Drink::typeToString(DrinkType type) {
     switch(type) {
         case DrinkType::ALCOHOL: return "ALCOHOL";
         case DrinkType::COFFEE: return "COFFEE";
         case DrinkType::JUICE: return "JUICE";
-        case DrinkType::OTHER: return "OTHER";
         case DrinkType::SODA: return "SODA";
         case DrinkType::TEA: return "TEA";
+        case DrinkType::OTHER: return "OTHER";
         default: return "OTHER";
     }
 }
@@ -71,9 +62,9 @@ DrinkType Drink::stringToType(const std::string& str) {
     if (str == "ALCOHOL") return DrinkType::ALCOHOL;
     if (str == "COFFEE") return DrinkType::COFFEE;
     if (str == "JUICE") return DrinkType::JUICE;
-    if (str == "OTHER") return DrinkType::OTHER;
     if (str == "SODA") return DrinkType::SODA;
     if (str == "TEA") return DrinkType::TEA;
-
+    if (str == "OTHER") return DrinkType::OTHER;
+    
     return DrinkType::OTHER;
 }
