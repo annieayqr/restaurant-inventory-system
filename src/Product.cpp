@@ -48,17 +48,17 @@ void Product::operator*(double discountFactor) {
     price *= discountFactor;
 }
 
-/* Restock and sell */
-
-void Product::restock(int amount) {
-    if (amount <= 0) throw std::invalid_argument("Amount should be positive.");
-    quantity += amount;
-}
-
-void Product::sell(int amount) {
-    if (amount <= 0) throw std::invalid_argument("Amount should be positive.");
-    if (amount > quantity) throw std::invalid_argument("Amount can't be larger than Qty.");
-    quantity -= amount;
+// Restock and sell
+void Product::adjustStock(int amount) {
+    if (amount == 0) {
+        throw std::invalid_argument("Amount cannot be zero.");
+    } else if (amount > 0) {
+        quantity += amount;
+    } else {
+        int sellAmount = -amount;
+        if (sellAmount > quantity) throw std::invalid_argument("Insufficient stock.");
+        quantity -= sellAmount;
+    }
 }
 
 // Alert if out of stock or low stock

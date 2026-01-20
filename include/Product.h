@@ -34,8 +34,7 @@ public:
     void operator*(double discountFactor);  // Apply discount and modify object (e.g. product * 0.8 = 20% off)
 
     // Restock and sell
-    void restock(int amount);
-    void sell(int amount);
+    void adjustStock(int amount);       // Positive for restock, negative for sell
 
     void checkStock() const;                    // Alert if out of stock or low stock
 
