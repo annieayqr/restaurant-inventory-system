@@ -27,6 +27,6 @@ A comprehensive C++ inventory management system for restaurants with allergy-awa
 ## Advanced C++ Features
 - C++11 lambdas for flexible filtering
 - Strongly-typed enum classes
-- Operator overloading for natural syntax
+- Function and operator overloading for natural syntax
 - Exception handling for robust error management
 - STL containers and algorithms
