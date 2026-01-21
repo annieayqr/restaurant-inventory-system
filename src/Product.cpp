@@ -70,7 +70,7 @@ void Product::checkStock() const {
     }
 }
 
-// Print product details
+// Print product details using operator overloading
 std::ostream& operator<<(std::ostream& os, const Product& product) {
     os << std::fixed << std::setprecision(2) << "[ID: " << product.getID() << "] " << 
           product.getName() << " | $" << product.getPrice() << " | Qty:" 

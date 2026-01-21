@@ -43,7 +43,7 @@ public:
     virtual std::string toCSV() const = 0;           // Convert to CSV format for saving
 };
 
-// Print product details
+// Print product details using operator overloading
 std::ostream& operator<<(std::ostream& os, const Product& product);  // Quick print product info
 
 #endif
