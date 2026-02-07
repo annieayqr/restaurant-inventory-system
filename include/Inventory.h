@@ -25,11 +25,11 @@ private:
 
 public:
     // Constructor and destructor
-    Inventory();
+    Inventory() = default;
     ~Inventory();
 
-    // 1. Modify stock
-    bool modifyStock(int id, int amount);
+    // 1. Adjust stock
+    bool adjustStock(int id, int amount);
 
     /* 2. Find and filter products */
     Product* findProduct(int id) const;

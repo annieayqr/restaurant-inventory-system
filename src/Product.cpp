@@ -1,5 +1,6 @@
 #include "Product.h"
 #include <iomanip>
+#include <iostream>
 #include <sstream>
 #include <stdexcept>
 
@@ -50,14 +51,14 @@ void Product::operator*(double discountFactor) {
 
 // Restock and sell
 void Product::adjustStock(int amount) {
-    if (amount == 0) {
-        throw std::invalid_argument("Amount cannot be zero.");
-    } else if (amount > 0) {
-        quantity += amount;
-    } else {
+    if (amount > 0) {
+        quantity += amount;  // Restock
+    } else if (amount < 0) {
         int sellAmount = -amount;
-        if (sellAmount > quantity) throw std::invalid_argument("Insufficient stock.");
-        quantity -= sellAmount;
+        if (sellAmount > quantity) {
+            throw std::invalid_argument("Insufficient stock.");
+        }
+        quantity -= sellAmount;  // Sell
     }
 }
 

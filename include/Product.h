@@ -6,7 +6,7 @@
 
 class Product {
 private:
-    int ID;             // Unique identifier for each product
+    const int ID;             // Unique identifier for each product
     std::string name;
     double price;   
     int quantity;       // Number in stock
