@@ -11,9 +11,8 @@ const std::string LOW_STOCK = " is low on stock. Qty: ";
 
 // Constructor
 Product::Product(std::string name, double price, int quantity, int threshold) 
-    : name(name), price((price >= 0) ? price : 0), quantity ((quantity >= 0)? quantity : 0), 
+    : ID(nextID++), name(name), price((price >= 0) ? price : 0), quantity ((quantity >= 0)? quantity : 0), 
       threshold((threshold >= 0)? threshold : 5){
-    ID = nextID++;
 }
 
 // Getters
